@@ -1,0 +1,17 @@
+server:
+  port: 11011
+
+spring:
+  config:
+    import:
+      - nacos:lll-auth.yml?group=auth
+      - nacos:lll-common.yml?group=common
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.100:8848
+        namespace: lll-prod
+      config:
+        server-addr: 192.168.1.100:8848
+        namespace: lll-prod

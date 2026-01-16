@@ -1,0 +1,23 @@
+server:
+  port: 10070
+
+spring:
+  config:
+    import:
+      - nacos:lll-auth.yml?group=auth
+      - nacos:lll-common.yml?group=common
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.100:8848
+        namespace: lll-dev
+      config:
+        server-addr: 192.168.1.100:8848
+        namespace: lll-dev
+
+
+
+
+
+

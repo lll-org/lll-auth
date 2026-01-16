@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>liululu's dog登录</title>
+</head>
+<body>
+    <h1>liululu's dog 注册</h1>
+    <form action="/auth/signUp" method="post">
+        <label >用户名</label>
+        <input type="text" name="username">
+        <label>密码</label>
+        <input type="text" name="password">
+<!--        <label>验证码</label>-->
+<!--        <input type="text" name="captcha">-->
+<!--        <img src="/captcha" alt="验证码"></img>-->
+<!--        <lab>记住我</lab>-->
+<!--        <input type="checkbox" name="remember-me">-->
+        <input type="submit" value="登录"></input>
+    </form>
+    <br/>
+
+<!--    <h1>SMS登录</h1>-->
+<!--    <form action="/smsLogin" method="post">-->
+<!--        <label >电话号码</label>-->
+<!--        <input type="text" name="phone">-->
+<!--        <lab>记住我</lab>-->
+<!--        <input type="checkbox" name="remember-me">-->
+<!--        <input type="submit" value="登录"></input>-->
+<!--    </form>-->
+<!--    <br/>-->
+
+
+<!--    <form id="loginForm">-->
+<!--        <label>用户名</label>-->
+<!--        <input type="text" name="username">-->
+<!--        <label>密码</label>-->
+<!--        <input type="password" name="password">-->
+<!--        <input type="submit" value="登录">-->
+<!--    </form>-->
+
+<!--    <script>-->
+<!--        document.getElementById("loginForm").addEventListener("submit", async function(e) {-->
+<!--            e.preventDefault(); // 阻止默认提交-->
+
+<!--            const data = {-->
+<!--                username: this.username.value,-->
+<!--                password: this.password.value-->
+<!--            };-->
+
+<!--            const res = await fetch("/auth/signUp", {-->
+<!--                method: "POST",-->
+<!--                headers: {-->
+<!--                    "Content-Type": "application/json"-->
+<!--                },-->
+<!--                body: JSON.stringify(data)-->
+<!--            });-->
+
+<!--            if (res.ok) {-->
+<!--                console.log("✅ 登录成功");-->
+<!--            } else {-->
+<!--                console.error("❌ 登录失败");-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+
+
+
+</body>
+</html>

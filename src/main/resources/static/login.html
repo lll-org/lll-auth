@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>liululu's dog登录</title>
+</head>
+<body>
+    <h1>liululu's dog 登录</h1>
+    <form action="/auth/login" method="post">
+        <label >用户名</label>
+        <input type="text" name="username">
+        <label>密码</label>
+        <input type="text" name="password">
+<!--        <label>验证码</label>-->
+<!--        <input type="text" name="captcha">-->
+<!--        <img src="/captcha" alt="验证码"></img>-->
+<!--        <lab>记住我</lab>-->
+<!--        <input type="checkbox" name="remember-me">-->
+        <input type="submit" value="登录"></input>
+    </form>
+    <br/>
+
+    <h1>SMS登录</h1>
+    <form action="/smsLogin" method="post">
+        <label >电话号码</label>
+        <input type="text" name="phone">
+        <img src="/auth/captcha" alt="验证码"></img>
+        <label >验证码</label>
+        <input type="text" name="captcha">
+<!--        <lab>记住我</lab>-->
+<!--        <input type="checkbox" name="remember-me">-->
+        <input type="submit" value="登录"></input>
+    </form>
+    <br/>
+
+    <h1>三方oauth2登录</h1>
+    <a href="/oauth2/authorization/github">github 登录</a>
+    <a href="/oauth2/authorization/gitee">gitee 登录</a>
+</body>
+</html>
