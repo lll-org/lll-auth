@@ -80,7 +80,6 @@ jobs:
           port: 6000
           script: |
             set -e
-            echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
             cd /mnt/
             ls
 
