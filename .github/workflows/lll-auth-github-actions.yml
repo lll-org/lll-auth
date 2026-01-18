@@ -81,7 +81,8 @@ jobs:
           script: |
             set -e
             echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
-            echo "over!!!!!!!!"
+            cd /mnt/
+            ls
 
 
 
