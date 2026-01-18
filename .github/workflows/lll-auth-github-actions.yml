@@ -42,11 +42,12 @@ jobs:
           nexus_password: ${{ secrets.NEXUS_PASSWORD }}
 
 
-      - name: Show Maven effective settings
-        run: mvn -B -ntp help:effective-settings
-
-      - name: Try to fetch parent POM directly
-        run: mvn -B -ntp -U dependency:get -Dartifact=top.***:***:pom:1.0-SNAPSHOT
+      - name: Show generated settings.xml (redacted)
+        run: |
+          echo "===== ~/.m2/settings.xml ====="
+          sed -E 's#(<password>).*?(</password>)#\1***\2#g' ~/.m2/settings.xml
+          echo "===== mirrors ====="
+          grep -n "<mirrors>" -n ~/.m2/settings.xml -n || true
 
 
 
