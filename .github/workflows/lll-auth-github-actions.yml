@@ -30,11 +30,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: ${{ env.JAVA_VERSION }}
-#          cache: 'maven'
+          cache: 'maven'
 
       # 关键：让 Maven 下载依赖走 Nexus（否则会找不到你私有的 parent / common）
       - name: Generate Maven settings.xml
-        uses: lll-org/lll-actions/.github/actions/maven-nexus-settings@v1
+        uses: lll-org/lll-actions/.github/actions/maven-nexus-settings@v2
         with:
           nexus_mirror_url: ${{ secrets.NEXUS_MIRROR_URL }}
           server_id: nexus
