@@ -5,6 +5,7 @@
         <groupId>top.lll44556</groupId>
         <artifactId>lll</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath/>
     </parent>
 
     <artifactId>lll-auth</artifactId>
@@ -14,7 +15,6 @@
 
 
     <dependencies>
-
         <dependency>
             <groupId>top.lll44556</groupId>
             <artifactId>lll-common</artifactId>
@@ -25,13 +25,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-authorization-server</artifactId>
         </dependency>
-
-
-
-
-
-
-
     </dependencies>
 
 </project>
