@@ -42,7 +42,7 @@ jobs:
           nexus_password: ${{ secrets.NEXUS_PASSWORD }}
 
       - name: Build (Maven)
-        run: mvn -B -ntp -DskipTests clean package
+        run: mvn -B -ntp -U -DskipTests clean package
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
