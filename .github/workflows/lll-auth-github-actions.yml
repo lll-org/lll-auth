@@ -36,7 +36,7 @@ jobs:
       - name: Configure Maven to use Nexus
         uses: lll-org/lll-actions/.github/actions/maven-nexus-settings@v1
         with:
-          nexus_mirror_url: ${{ secrets.NEXUS_MIRROR_URL }}
+          nexus_mirror_url: https://nexus.lll44556.top/repository/maven-public/
           server_id: nexus
           nexus_username: ${{ secrets.NEXUS_USERNAME }}
           nexus_password: ${{ secrets.NEXUS_PASSWORD }}
