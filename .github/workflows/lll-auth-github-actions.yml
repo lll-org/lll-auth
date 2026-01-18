@@ -41,6 +41,15 @@ jobs:
           nexus_username: ${{ secrets.NEXUS_USERNAME }}
           nexus_password: ${{ secrets.NEXUS_PASSWORD }}
 
+
+      - name: Show Maven effective settings
+        run: mvn -B -ntp help:effective-settings
+
+      - name: Try to fetch parent POM directly
+        run: mvn -B -ntp -U dependency:get -Dartifact=top.***:***:pom:1.0-SNAPSHOT
+
+
+
       - name: Build (Maven)
         run: mvn -B -ntp -U -DskipTests clean package
         env:
