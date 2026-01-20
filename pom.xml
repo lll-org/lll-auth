@@ -28,15 +28,8 @@
         </dependency>
     </dependencies>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <url>https://nexus.lll44556.top/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <url>https://nexus.lll44556.top/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+
+
+
 
 </project>

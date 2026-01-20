@@ -83,6 +83,8 @@ jobs:
             set -e
             echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
             docker pull ${{ env.IMAGE_NAME }}:${{ github.sha }}
+            cd /mnt/a/workspace/docker/service/lll-gateway
+            docker compose up -d
             
             
             
