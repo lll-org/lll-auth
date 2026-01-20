@@ -34,21 +34,12 @@ jobs:
 
       # 关键：让 Maven 下载依赖走 Nexus（否则会找不到你私有的 parent / common）
       - name: Generate Maven settings.xml
-        uses: lll-org/lll-actions/.github/actions/maven-nexus-settings@v2
+        uses: lll-org/lll-actions/.github/actions/maven-nexus-settings@v3
         with:
           nexus_mirror_url: ${{ secrets.NEXUS_MIRROR_URL }}
           server_id: nexus
           nexus_username: ${{ secrets.NEXUS_USERNAME }}
           nexus_password: ${{ secrets.NEXUS_PASSWORD }}
-
-
-      - name: Show generated settings.xml (redacted)
-        run: |
-          echo "===== ~/.m2/settings.xml ====="
-          sed -E 's#(<password>).*?(</password>)#\1***\2#g' ~/.m2/settings.xml
-          echo "===== mirrors ====="
-          grep -n "<mirrors>" -n ~/.m2/settings.xml -n || true
-
 
 
       - name: Build (Maven)
